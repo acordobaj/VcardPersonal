@@ -7,7 +7,7 @@
     <style>
         /* Estilos Generales */
         body {
-            font-family: -apple-system, BlinkMacMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
             background-color: #000033; /* Color de fondo base azul oscuro */
             color: #ffffff; /* Texto blanco */
             display: flex;
@@ -17,9 +17,9 @@
             margin: 0;
             padding: 20px;
 
-            /* --- ESTILOS DE FONDO AÑADIDOS/MODIFICADOS --- */
-            /* URL de una imagen de patrón de circuito (puedes cambiarla) */
-            background-image: url('https://raw.githubusercontent.com/acordobaj/VcardPersonal/main/1761270227.png'); /* Ruta a tu imagen de circuito */
+            /* --- ESTILOS DE FONDO --- */
+            /* URL de tu imagen de GitHub como fondo */
+            background-image: url('https://raw.githubusercontent.com/acordobaj/VcardPersonal/main/1761270227.png'); 
             background-size: cover; /* Cubre todo el área */
             background-position: center center; /* Centra la imagen */
             background-repeat: no-repeat; /* No repite la imagen */
@@ -39,7 +39,7 @@
             background-color: rgba(0, 0, 51, 0.7); /* Capa azul oscura semitransparente */
             z-index: -1; /* Asegura que esté detrás del contenido */
         }
-        /* --- FIN ESTILOS DE FONDO AÑADIDOS/MODIFICADOS --- */
+        /* --- FIN ESTILOS DE FONDO --- */
 
 
         /* Estilo de la Tarjeta (vCard style) */
@@ -55,15 +55,16 @@
             z-index: 1;
         }
 
-        /* Título Principal */
-        .titulo-principal {
-            font-size: 2.2em;
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: #ffffff;
-            border-bottom: 3px solid #00c7e5; /* Línea de color de acento */
-            padding-bottom: 10px;
+        /* --- ESTILO DEL LOGO --- */
+        .logo-pagina {
+            display: block;
+            max-width: 250px; /* Tamaño del logo: ajústalo si es muy grande/pequeño */
+            height: auto;
+            margin: 0 auto 30px auto; /* Centra el logo y le da un margen inferior */
+            /* La línea divisoria del h1 ya no es necesaria, el logo ocupa su lugar */
         }
+
+        /* [CÓDIGO ELIMINADO]: Ya no es necesario el .titulo-principal */
 
         /* Subtítulo o Sección de Servicios */
         .subtitulo-servicios {
@@ -131,7 +132,9 @@
 
     <div class="vcard-container">
         
-        <h1 class="titulo-principal">Desarrollo e Integración</h1>
+        <img src="https://raw.githubusercontent.com/acordobaj/VcardPersonal/main/LogoDI1.png" 
+             alt="Logo Desarrollo e Integración" 
+             class="logo-pagina">
         
         <p class="subtitulo-servicios">Nuestros Servicios Incluyen:</p>
 
@@ -145,14 +148,13 @@
         
         <div class="contacto">
             <p>Para más información o cotizaciones, contáctanos:</p>
-            <p>Email: <a href="mailto:tu.email@ejemplo.com">acordobaj@gmail.com</a> | <a href="https://t.me/acordobaj">Telegram</a></p>
+            <p>Email: <a href="mailto:acordobaj@gmail.com">acordobaj@gmail.com</a> | <a href="https://t.me/acordobaj">Telegram</a></p>
         </div>
 
     </div>
 
 </body>
 </html>
-
 
 
 
