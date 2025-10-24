@@ -7,8 +7,8 @@
     <style>
         /* Estilos Generales */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            background-color: #000033; /* Fondo azul oscuro similar al de la imagen */
+            font-family: -apple-system, BlinkMacMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            background-color: #000033; /* Color de fondo base azul oscuro */
             color: #ffffff; /* Texto blanco */
             display: flex;
             justify-content: center;
@@ -16,17 +16,43 @@
             min-height: 100vh;
             margin: 0;
             padding: 20px;
+
+            /* --- ESTILOS DE FONDO AÑADIDOS/MODIFICADOS --- */
+            /* URL de una imagen de patrón de circuito (puedes cambiarla) */
+            background-image: url('https://raw.githubusercontent.com/JuanDGarces/mis-servicios-vcard/main/circuito.png'); /* Ruta a tu imagen de circuito */
+            background-size: cover; /* Cubre todo el área */
+            background-position: center center; /* Centra la imagen */
+            background-repeat: no-repeat; /* No repite la imagen */
+            background-attachment: fixed; /* Fija la imagen de fondo al viewport */
+            /* Capa semitransparente sobre la imagen para oscurecerla y aplicar un tono azul */
+            position: relative; /* Necesario para el pseudo-elemento */
+            overflow-x: hidden; /* Evita barras de desplazamiento horizontales si la imagen es muy grande */
         }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 51, 0.7); /* Capa azul oscura semitransparente */
+            z-index: -1; /* Asegura que esté detrás del contenido */
+        }
+        /* --- FIN ESTILOS DE FONDO AÑADIDOS/MODIFICADOS --- */
+
 
         /* Estilo de la Tarjeta (vCard style) */
         .vcard-container {
-            background-color: #0a0a50; /* Un azul ligeramente más claro para la tarjeta */
+            background-color: rgba(10, 10, 80, 0.9); /* Un azul ligeramente más claro para la tarjeta, ahora con transparencia */
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             padding: 40px;
             max-width: 450px;
             width: 100%;
             text-align: left;
+            position: relative; /* Asegura que la tarjeta esté por encima del pseudo-elemento del body */
+            z-index: 1;
         }
 
         /* Título Principal */
@@ -56,7 +82,7 @@
         }
 
         .lista-servicios li {
-            background-color: #14146a; /* Fondo para cada elemento de la lista */
+            background-color: rgba(20, 20, 106, 0.8); /* Fondo para cada elemento de la lista, con transparencia */
             padding: 12px 20px;
             margin-bottom: 10px;
             border-radius: 8px;
@@ -78,14 +104,14 @@
         
         /* Opcional: Estilo al pasar el ratón */
         .lista-servicios li:hover {
-            background-color: #1c1c7a;
+            background-color: rgba(28, 28, 122, 0.9);
         }
         
         /* Sección de Contacto (Ejemplo) */
         .contacto {
             margin-top: 30px;
             padding-top: 20px;
-            border-top: 1px solid #333366;
+            border-top: 1px solid rgba(51, 51, 102, 0.7); /* Borde con transparencia */
             text-align: center;
             font-size: 0.9em;
         }
@@ -119,12 +145,12 @@
         
         <div class="contacto">
             <p>Para más información o cotizaciones, contáctanos:</p>
-            <p>Email: <a href="mailto:tu.email@ejemplo.com">acordobaj@gmail.com</a> | <a href="https://t.me/acordobaj">Telegram</a></p>
+            <p>Email: <a href="mailto:tu.email@ejemplo.com">tu.email@ejemplo.com</a> | <a href="https://t.me/tuusuario">Telegram</a></p>
         </div>
 
     </div>
 
 </body>
-
 </html>
+
 
