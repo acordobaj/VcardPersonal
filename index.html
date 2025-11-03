@@ -8,8 +8,8 @@
         /* Estilos Generales */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            background-color: #000033;
-            color: #ffffff;
+            background-color: #000033; /* Color de fondo base azul oscuro */
+            color: #ffffff; /* Texto blanco */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -18,13 +18,15 @@
             padding: 20px;
 
             /* --- ESTILOS DE FONDO --- */
+            /* URL de tu imagen de GitHub como fondo */
             background-image: url('https://raw.githubusercontent.com/acordobaj/VcardPersonal/main/1761270227.png'); 
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            position: relative;
-            overflow-x: hidden;
+            background-size: cover; /* Cubre todo el área */
+            background-position: center center; /* Centra la imagen */
+            background-repeat: no-repeat; /* No repite la imagen */
+            background-attachment: fixed; /* Fija la imagen de fondo al viewport */
+            /* Capa semitransparente sobre la imagen para oscurecerla y aplicar un tono azul */
+            position: relative; /* Necesario para el pseudo-elemento */
+            overflow-x: hidden; /* Evita barras de desplazamiento horizontales si la imagen es muy grande */
         }
 
         body::before {
@@ -34,31 +36,31 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 51, 0.7);
-            z-index: -1;
+            background-color: rgba(0, 0, 51, 0.7); /* Capa azul oscura semitransparente */
+            z-index: -1; /* Asegura que esté detrás del contenido */
         }
         /* --- FIN ESTILOS DE FONDO --- */
 
 
         /* Estilo de la Tarjeta (vCard style) */
         .vcard-container {
-            background-color: rgba(10, 10, 80, 0.9);
+            background-color: rgba(10, 10, 80, 0.9); /* Un azul ligeramente más claro para la tarjeta, ahora con transparencia */
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             padding: 40px;
             max-width: 450px;
             width: 100%;
             text-align: left;
-            position: relative;
+            position: relative; /* Asegura que la tarjeta esté por encima del pseudo-elemento del body */
             z-index: 1;
         }
 
         /* --- ESTILO DEL LOGO --- */
         .logo-pagina {
             display: block;
-            max-width: 250px;
+            max-width: 250px; /* Tamaño del logo: ajústalo si es muy grande/pequeño */
             height: auto;
-            margin: 0 auto 30px auto;
+            margin: 0 auto 30px auto; /* Centra el logo y le da un margen inferior */
         }
 
         /* Subtítulo o Sección de Servicios */
@@ -66,7 +68,7 @@
             font-size: 1.4em;
             margin-top: 30px;
             margin-bottom: 15px;
-            color: #00c7e5;
+            color: #00c7e5; /* Color de acento */
             font-weight: 500;
         }
 
@@ -78,7 +80,7 @@
         }
 
         .lista-servicios li {
-            background-color: rgba(20, 20, 106, 0.8);
+            background-color: rgba(20, 20, 106, 0.8); /* Fondo para cada elemento de la lista, con transparencia */
             padding: 12px 20px;
             margin-bottom: 10px;
             border-radius: 8px;
@@ -88,7 +90,7 @@
             align-items: center;
         }
         
-        /* Estilo para los enlaces dentro de la lista (incluyendo el nuevo) */
+        /* Estilos para los enlaces dentro de la lista (para Surfshark) */
         .lista-servicios li a {
             color: inherit; /* Hereda el color del texto blanco */
             text-decoration: none; /* Quita el subrayado predeterminado */
@@ -97,8 +99,8 @@
         }
 
         .lista-servicios li:before {
-            content: '•';
-            color: #00c7e5;
+            content: '•'; /* Ícono de viñeta moderno */
+            color: #00c7e5; /* Color del ícono */
             font-weight: bold;
             display: inline-block;
             width: 1em;
@@ -106,17 +108,16 @@
             margin-right: 0.5em;
         }
         
+        /* Opcional: Estilo al pasar el ratón */
         .lista-servicios li:hover {
             background-color: rgba(28, 28, 122, 0.9);
-            /* Opcional: cambiar el color del ícono para el hover */
-            /* filter: brightness(1.2); */
         }
         
         /* Sección de Contacto (Ejemplo) */
         .contacto {
             margin-top: 30px;
             padding-top: 20px;
-            border-top: 1px solid rgba(51, 51, 102, 0.7);
+            border-top: 1px solid rgba(51, 51, 102, 0.7); /* Borde con transparencia */
             text-align: center;
             font-size: 0.9em;
         }
@@ -163,6 +164,10 @@
 
     </div>
 
+</body>
+</html>
+
     </body>
 </html>
+
 
