@@ -1,163 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desarrollo e Integración - Servicios Profesionales</title>
-    <style>
-        /* Estilos Generales */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            background-color: #000033; /* Color de fondo base azul oscuro */
-            color: #ffffff; /* Texto blanco */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo e Integración - Servicios Profesionales</title>
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            background-color: #000033; /* Color de fondo base azul oscuro */
+            color: #ffffff; /* Texto blanco */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
 
-            /* --- ESTILOS DE FONDO --- */
-            /* URL de tu imagen de GitHub como fondo */
-            background-image: url('https://raw.githubusercontent.com/acordobaj/VcardPersonal/main/1761270227.png'); 
-            background-size: cover; /* Cubre todo el área */
-            background-position: center center; /* Centra la imagen */
-            background-repeat: no-repeat; /* No repite la imagen */
-            background-attachment: fixed; /* Fija la imagen de fondo al viewport */
-            /* Capa semitransparente sobre la imagen para oscurecerla y aplicar un tono azul */
-            position: relative; /* Necesario para el pseudo-elemento */
-            overflow-x: hidden; /* Evita barras de desplazamiento horizontales si la imagen es muy grande */
-        }
+            /* --- ESTILOS DE FONDO --- */
+            /* URL de tu imagen de GitHub como fondo */
+            background-image: url('https://raw.githubusercontent.com/acordobaj/VcardPersonal/main/1761270227.png'); 
+            background-size: cover; /* Cubre todo el área */
+            background-position: center center; /* Centra la imagen */
+            background-repeat: no-repeat; /* No repite la imagen */
+            background-attachment: fixed; /* Fija la imagen de fondo al viewport */
+            /* Capa semitransparente sobre la imagen para oscurecerla y aplicar un tono azul */
+            position: relative; /* Necesario para el pseudo-elemento */
+            overflow-x: hidden; /* Evita barras de desplazamiento horizontales si la imagen es muy grande */
+        }
 
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 51, 0.7); /* Capa azul oscura semitransparente */
-            z-index: -1; /* Asegura que esté detrás del contenido */
-        }
-        /* --- FIN ESTILOS DE FONDO --- */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 51, 0.7); /* Capa azul oscura semitransparente */
+            z-index: -1; /* Asegura que esté detrás del contenido */
+        }
+        /* --- FIN ESTILOS DE FONDO --- */
 
 
-        /* Estilo de la Tarjeta (vCard style) */
-        .vcard-container {
-            background-color: rgba(10, 10, 80, 0.9); /* Un azul ligeramente más claro para la tarjeta, ahora con transparencia */
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            padding: 40px;
-            max-width: 450px;
-            width: 100%;
-            text-align: left;
-            position: relative; /* Asegura que la tarjeta esté por encima del pseudo-elemento del body */
-            z-index: 1;
-        }
+        /* Estilo de la Tarjeta (vCard style) */
+        .vcard-container {
+            background-color: rgba(10, 10, 80, 0.9); /* Un azul ligeramente más claro para la tarjeta, ahora con transparencia */
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            max-width: 450px;
+            width: 100%;
+            text-align: left;
+            position: relative; /* Asegura que la tarjeta esté por encima del pseudo-elemento del body */
+            z-index: 1;
+        }
 
-        /* --- ESTILO DEL LOGO --- */
-        .logo-pagina {
-            display: block;
-            max-width: 250px; /* Tamaño del logo: ajústalo si es muy grande/pequeño */
-            height: auto;
-            margin: 0 auto 30px auto; /* Centra el logo y le da un margen inferior */
-            /* La línea divisoria del h1 ya no es necesaria, el logo ocupa su lugar */
-        }
+        /* --- ESTILO DEL LOGO --- */
+        .logo-pagina {
+            display: block;
+            max-width: 250px; /* Tamaño del logo: ajústalo si es muy grande/pequeño */
+            height: auto;
+            margin: 0 auto 30px auto; /* Centra el logo y le da un margen inferior */
+            /* La línea divisoria del h1 ya no es necesaria, el logo ocupa su lugar */
+        }
 
-        /* [CÓDIGO ELIMINADO]: Ya no es necesario el .titulo-principal */
+        /* [CÓDIGO ELIMINADO]: Ya no es necesario el .titulo-principal */
 
-        /* Subtítulo o Sección de Servicios */
-        .subtitulo-servicios {
-            font-size: 1.4em;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            color: #00c7e5; /* Color de acento */
-            font-weight: 500;
-        }
+        /* Subtítulo o Sección de Servicios */
+        .subtitulo-servicios {
+            font-size: 1.4em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #00c7e5; /* Color de acento */
+            font-weight: 500;
+        }
 
-        /* Lista de Servicios */
-        .lista-servicios {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+        /* Lista de Servicios */
+        .lista-servicios {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-        .lista-servicios li {
-            background-color: rgba(20, 20, 106, 0.8); /* Fondo para cada elemento de la lista, con transparencia */
-            padding: 12px 20px;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            font-size: 1.1em;
-            transition: background-color 0.3s;
-            display: flex;
-            align-items: center;
-        }
+        .lista-servicios li {
+            background-color: rgba(20, 20, 106, 0.8); /* Fondo para cada elemento de la lista, con transparencia */
+            padding: 12px 20px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+        }
 
-        .lista-servicios li:before {
-            content: '•'; /* Ícono de viñeta moderno */
-            color: #00c7e5; /* Color del ícono */
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-            margin-right: 0.5em;
-        }
-        
-        /* Opcional: Estilo al pasar el ratón */
-        .lista-servicios li:hover {
-            background-color: rgba(28, 28, 122, 0.9);
-        }
-        
-        /* Sección de Contacto (Ejemplo) */
-        .contacto {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(51, 51, 102, 0.7); /* Borde con transparencia */
-            text-align: center;
-            font-size: 0.9em;
-        }
-        
-        .contacto a {
-            color: #00c7e5;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        .contacto a:hover {
-            text-decoration: underline;
-        }
-    </style>
+        .lista-servicios li:before {
+            content: '•'; /* Ícono de viñeta moderno */
+            color: #00c7e5; /* Color del ícono */
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            margin-right: 0.5em;
+        }
+        
+        /* Opcional: Estilo al pasar el ratón */
+        .lista-servicios li:hover {
+            background-color: rgba(28, 28, 122, 0.9);
+        }
+        
+        /* Sección de Contacto (Ejemplo) */
+        .contacto {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(51, 51, 102, 0.7); /* Borde con transparencia */
+            text-align: center;
+            font-size: 0.9em;
+        }
+        
+        .contacto a {
+            color: #00c7e5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .contacto a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="vcard-container">
-        
-        <img src="https://raw.githubusercontent.com/acordobaj/VcardPersonal/main/LogoDI1.png" 
-             alt="Logo Desarrollo e Integración" 
-             class="logo-pagina">
-        
-        <p class="subtitulo-servicios">Nuestros Servicios Incluyen:</p>
+    <div class="vcard-container">
+        
+        <img src="https://raw.githubusercontent.com/acordobaj/VcardPersonal/main/LogoDI1.png" 
+             alt="Logo Desarrollo e Integración" 
+             class="logo-pagina">
+        
+        <p class="subtitulo-servicios">Nuestros Servicios Incluyen:</p>
 
-        <ul class="lista-servicios">
-            <li>Chatbot para Telegram</li>
-            <li>Chatbot para WhatsApp</li>
-            <li>Web scraping</li>
-            <li>Desarrollo e integración de API's</li>
-            <li>Sistemas Web</li>
-            <li>Sistemas Desk</li>
-        </ul>
-        
-        <div class="contacto">
-            <p>Para más información o cotizaciones, contáctanos:</p>
-            <p>Email: <a href="mailto:acordobaj@gmail.com">acordobaj@gmail.com</a> | <a href="https://t.me/acordobaj">Telegram</a></p>
-        </div>
+        <ul class="lista-servicios">
+            <li>Chatbot para Telegram</li>
+            <li>Chatbot para WhatsApp</li>
+            <li>Web scraping</li>
+            <li>Desarrollo e integración de API's</li>
+            <li>Sistemas Web</li>
+            <li>Sistemas Desk</li>
+        </ul>
+        
+        <div class="contacto">
+            <p>Para más información o cotizaciones, contáctanos:</p>
+            <p>Email: <a href="mailto:acordobaj@gmail.com">acordobaj@gmail.com</a> | <a href="https://t.me/acordobaj">Telegram</a></p>
+        </div>
 
-    </div>
+    </div>
+
+        <img src="https://get.surfshark.net/aff_i?offer_id=926&aff_id=42012" width="0" height="0" style="position:absolute;visibility:hidden;" border="0" />
 
 </body>
 </html>
-
-
-
-
-
